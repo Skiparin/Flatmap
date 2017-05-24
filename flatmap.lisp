@@ -13,7 +13,6 @@
 ;; the new list. Your function should take two arguments: a function and a list
 (defun myMap (func l)
 (if (equal l nil) l (cons (funcall func (car l)) (myMap func (cdr l)))))
-
 (write(myMap (lambda (a) (+ a 2)) (list 3 5 7 9)))
 ;; Should return: (5 7 9 11)
 
